@@ -1,33 +1,33 @@
-﻿using System;
+﻿using LoseWeight.App.Common;
+using LoseWeight.Domain.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoseWeight
+namespace LoseWeight.App.Concrete
 {
-    public class MenuActionService
+    public class MenuActionService : BaseService<MenuActions>
     {
-        private List<MenuActions> menuActions;
 
+        //public void AddAction(int id, string actionName, string menuName)
+        //{
+        //    MenuActions menuAction = new MenuActions() { Id = id, ActionName = actionName, MenuName = menuName };
+        //    menuActions.Add(menuAction);
+        //}
         public MenuActionService()
         {
-            menuActions = new List<MenuActions>();
-        }
-
-        public void AddAction(int id, string actionName, string menuName)
-        {
-            MenuActions menuAction = new MenuActions() { Id = id, ActionName = actionName, MenuName = menuName };
-            menuActions.Add(menuAction);
+            Initialize();
         }
 
         public List<MenuActions> GetMenuActionsByName(string name)
         {
             List<MenuActions> result = new List<MenuActions>();
 
-            foreach (var menuAction in menuActions)
+            foreach (var menuAction in Items)
             {
-                if(menuAction.MenuName == name)
+                if (menuAction.MenuName == name)
                 {
                     result.Add(menuAction);
                 }
@@ -40,9 +40,9 @@ namespace LoseWeight
         {
             List<MenuActions> result = new List<MenuActions>();
 
-            foreach (var menuAction in menuActions)
+            foreach (var menuAction in Items)
             {
-                if (menuAction.ActionName == name)
+                if (menuAction.Name == name)
                 {
                     result.Add(menuAction);
                 }
@@ -62,8 +62,8 @@ namespace LoseWeight
             double.TryParse(height, out heightValue);
             heightValue = heightValue / 100;
             double bmi = weightValue / Math.Pow(heightValue, 2);
-            
-            if(bmi >= 18.5 && bmi <= 24.99)
+
+            if (bmi >= 18.5 && bmi <= 24.99)
             {
                 Console.WriteLine($"Your BMI is {bmi}. You heave correct weight \n");
             }
@@ -120,17 +120,18 @@ namespace LoseWeight
             var person = GetDataForCounting();
             double maleBmr = 66 + (13.7 * person.WeightValue) + (5 * person.HeightValue) - (6.8 * person.AgeValue);
             Console.WriteLine($"Your BMR is equal: {maleBmr} kcal");
-                  
+
         }
 
         public void CountBMR()
         {
             Console.WriteLine("\nPlease anter yor sex M/F:");
             var sex = Console.ReadLine();
-            if(sex.ToUpper() == "M")
+            if (sex.ToUpper() == "M")
             {
                 CountBmrMale();
-            }else if(sex.ToUpper() == "F")
+            }
+            else if (sex.ToUpper() == "F")
             {
                 CountBmrFemale();
             }
@@ -139,5 +140,26 @@ namespace LoseWeight
                 Console.WriteLine("Action you entered does not exist");
             }
         }
+
+        private void Initialize()
+        {
+            AddItem(new MenuActions(1, "Count BMI", "Main"));
+            AddItem(new MenuActions(2, "Count BMR", "Main"));
+            AddItem(new MenuActions(3, "Add dish to list", "Main"));
+            AddItem(new MenuActions(4, "Remove dish from list", "Main"));
+            AddItem(new MenuActions(5, "Show dish List", "Main"));
+            AddItem(new MenuActions(6, "Count calorific value", "Main"));
+
+            AddItem(new MenuActions(1, "Dairy", "Dish"));
+            AddItem(new MenuActions(2, "Bread", "Dish"));
+            AddItem(new MenuActions(3, "Meat", "Dish"));
+
+           
+
+
+        }
     }
+
+   
+
 }

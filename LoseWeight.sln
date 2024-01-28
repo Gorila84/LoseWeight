@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoseWeight", "LoseWeight\LoseWeight.csproj", "{BBA66F9C-22A5-4601-A08F-18F37CEF12D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoseWeight", "LoseWeight\LoseWeight.csproj", "{BBA66F9C-22A5-4601-A08F-18F37CEF12D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoseWeight.App", "LoseWeight.App\LoseWeight.App.csproj", "{736C4865-A3BB-4AAC-9AF9-14ED5074534B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoseWeight.Domain", "LoseWeight.Domain\LoseWeight.Domain.csproj", "{B98BB1F2-A7FC-40B0-AE66-0A3B08A5853D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{BBA66F9C-22A5-4601-A08F-18F37CEF12D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBA66F9C-22A5-4601-A08F-18F37CEF12D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBA66F9C-22A5-4601-A08F-18F37CEF12D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736C4865-A3BB-4AAC-9AF9-14ED5074534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736C4865-A3BB-4AAC-9AF9-14ED5074534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736C4865-A3BB-4AAC-9AF9-14ED5074534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736C4865-A3BB-4AAC-9AF9-14ED5074534B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98BB1F2-A7FC-40B0-AE66-0A3B08A5853D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98BB1F2-A7FC-40B0-AE66-0A3B08A5853D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98BB1F2-A7FC-40B0-AE66-0A3B08A5853D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98BB1F2-A7FC-40B0-AE66-0A3B08A5853D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
