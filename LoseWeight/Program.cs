@@ -37,14 +37,16 @@ public class Program
                     var newId = dishService.AddDish();
                     break;
                 case '4':
-                    var dishId = dishService.RemoveDishView();
-                    dishService.RemoveDish(dishId);
+                    //var dishId = dishService.RemoveDishView();
+                    //dishService.RemoveDish(dishId);
                     break;
                 case '5':
-                    var dishes = dishService.GetAllItems();
-                    //menuActionService.AddAction(4, "All", "Dish");
-                    //var typeOfFood = dishService.AddNewDishView(menuActionService);
-                    //dishService.ShowAlldishes(typeOfFood.KeyChar);
+                    var dishes = dishService.GetAlldishes();
+                    Console.WriteLine("\nID|Name|Calories|Dish type");
+                    foreach (var dish in dishes)
+                    {
+                        Console.WriteLine(dish.Id + "|" + dish.Name + "|" + dish.Calories + "|" + dish.Dishtype);
+                    }
                     break;
                 case '6':
                     dishService.CountDishCalorific();

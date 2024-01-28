@@ -153,7 +153,7 @@ namespace LoseWeight.App.Concrete
             AddItem(new MenuActions(1, "Dairy", "Dish"));
             AddItem(new MenuActions(2, "Bread", "Dish"));
             AddItem(new MenuActions(3, "Meat", "Dish"));
-
+            AddItem(new MenuActions(4, "All", "Dish"));
            
 
 

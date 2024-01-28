@@ -65,11 +65,13 @@ namespace LoseWeight.App.Concrete
 
         
 
-        public List<Dish> ShowAlldishes()
+        public List<Dish> GetAlldishes()
         {
 
             var dishes = _itemService.GetAllItems();
             return dishes;
+            
+            
         }
 
         public double CountDishCalorificPerOneGram(Dish dish, int quantity)
