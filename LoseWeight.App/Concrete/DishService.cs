@@ -1,12 +1,6 @@
 ﻿using LoseWeight.App.Abstract;
 using LoseWeight.App.Common;
 using LoseWeight.Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoseWeight.App.Concrete
 {
@@ -30,9 +24,6 @@ namespace LoseWeight.App.Concrete
         }
         public int AddDish()
         {
-            int dishTypeId;
-            int caloriesValue;
-
             var addNewDishItemMenu = _actionService.GetMenuActionsByName("Dish");
             for (int i = 0; i < addNewDishItemMenu.Count; i++)
             {
@@ -40,7 +31,7 @@ namespace LoseWeight.App.Concrete
             }
 
             var operation = Console.ReadKey();
-            Int32.TryParse(operation.KeyChar.ToString(), out dishTypeId);
+            Int32.TryParse(operation.KeyChar.ToString(), out int dishTypeId);
 
             Console.WriteLine("Please enter name for new dish: ");
             var name = Console.ReadLine();
@@ -48,7 +39,7 @@ namespace LoseWeight.App.Concrete
             Console.WriteLine("Please enter the amount of calories per 100 grams of the dish: ");
             var calories = Console.ReadLine();
             
-            Int32.TryParse(calories, out caloriesValue);
+            Int32.TryParse(calories, out int caloriesValue);
             var lastId = _itemService.GetLastId();
 
             Dish dish = new Dish(lastId + 1, name, caloriesValue, dishTypeId);
@@ -74,33 +65,7 @@ namespace LoseWeight.App.Concrete
             
         }
 
-        public double CountDishCalorificPerOneGram(Dish dish, int quantity)
-        {
-            
-            double calorific = (double)(dish.Calories / 100.00) * quantity;
-            return calorific;
-        }
-
-        public Dish GetDishForCount()
-        {
-            Console.WriteLine("Enter product name for count calorific:");
-            var dishName = Console.ReadLine();
-            var dishForCount = _itemService.GetItemByName(dishName);
-            return dishForCount;
-
-        }
-
-        public void CountDishCalorific() 
-        {
-            Dish dish = GetDishForCount();
-            Console.WriteLine("Enter product grams:");
-            var grams = Console.ReadLine();
-            int dishGrams;
-            Int32.TryParse(grams, out dishGrams);
-            double calorific = CountDishCalorificPerOneGram(dish, dishGrams);
-            Console.WriteLine($"Caloric content is equal: {calorific}");
-
-        }
+      
 
     }
 }

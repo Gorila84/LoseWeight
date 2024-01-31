@@ -1,7 +1,4 @@
-﻿
-
-using LoseWeight.App.Concrete;
-using LoseWeight.Domain.Entity;
+﻿using LoseWeight.App.Concrete;
 
 public class Program
 {
@@ -10,6 +7,7 @@ public class Program
         MenuActionService menuActionService = new MenuActionService();
         ItemService itemService = new ItemService();
         DishService dishService = new DishService(menuActionService, itemService);
+        CountService countService = new CountService(menuActionService, itemService);
        
 
         while (true)
@@ -28,17 +26,19 @@ public class Program
             switch (operation.KeyChar)
             {
                 case '1':
-                    menuActionService.CountBMI();
+                    countService.CountBMI();
                     break;
                 case '2':
-                    menuActionService.CountBMR();
+                    countService.CountBMR();
                     break;
                 case '3':
                     var newId = dishService.AddDish();
                     break;
                 case '4':
-                    //var dishId = dishService.RemoveDishView();
-                    //dishService.RemoveDish(dishId);
+                    Console.WriteLine("Podaj Id dania do usunięcia: ");
+                    var idForRemove = Console.ReadLine();
+                    Int32.TryParse(idForRemove, out int id);
+                    dishService.RemoveDish(id);
                     break;
                 case '5':
                     var dishes = dishService.GetAlldishes();
@@ -49,7 +49,7 @@ public class Program
                     }
                     break;
                 case '6':
-                    dishService.CountDishCalorific();
+                    countService.CountDishCalorific();
                     break;
                 default:
                     Console.WriteLine("Action you entered does not exist");

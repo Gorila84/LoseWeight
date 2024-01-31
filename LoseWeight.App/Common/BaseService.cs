@@ -1,10 +1,5 @@
 ﻿using LoseWeight.App.Abstract;
 using LoseWeight.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoseWeight.App.Common
 {
