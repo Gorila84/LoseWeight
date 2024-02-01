@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Managers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\LoseWeight.Domain\LoseWeight.Domain.csproj" />
   </ItemGroup>
 

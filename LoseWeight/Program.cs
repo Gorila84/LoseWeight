@@ -1,4 +1,5 @@
 ﻿using LoseWeight.App.Concrete;
+using LoseWeight.App.Managers;
 
 public class Program
 {
@@ -6,8 +7,8 @@ public class Program
     {
         MenuActionService menuActionService = new MenuActionService();
         ItemService itemService = new ItemService();
-        DishService dishService = new DishService(menuActionService, itemService);
-        CountService countService = new CountService(menuActionService, itemService);
+        DishManager dishManager = new DishManager(menuActionService, itemService);
+        CountManager countManager = new CountManager(itemService);
        
 
         while (true)
@@ -26,22 +27,24 @@ public class Program
             switch (operation.KeyChar)
             {
                 case '1':
-                    countService.CountBMI();
+                    Console.WriteLine("\n");
+                    countManager.CountBMI();
                     break;
                 case '2':
-                    countService.CountBMR();
+                    Console.WriteLine("\n");
+                    countManager.CountBMR();
                     break;
                 case '3':
-                    var newId = dishService.AddDish();
+                    Console.WriteLine("\n");
+                    var newId = dishManager.AddDish();
                     break;
                 case '4':
-                    Console.WriteLine("Podaj Id dania do usunięcia: ");
-                    var idForRemove = Console.ReadLine();
-                    Int32.TryParse(idForRemove, out int id);
-                    dishService.RemoveDish(id);
+                    Console.WriteLine("\n");
+                    dishManager.RemoveDish();
                     break;
                 case '5':
-                    var dishes = dishService.GetAlldishes();
+                    Console.WriteLine("\n");
+                    var dishes = dishManager.GetAlldishes();
                     Console.WriteLine("\nID|Name|Calories|Dish type");
                     foreach (var dish in dishes)
                     {
@@ -49,7 +52,8 @@ public class Program
                     }
                     break;
                 case '6':
-                    countService.CountDishCalorific();
+                    Console.WriteLine("\n");
+                    countManager.CountDishCalorific();
                     break;
                 default:
                     Console.WriteLine("Action you entered does not exist");
