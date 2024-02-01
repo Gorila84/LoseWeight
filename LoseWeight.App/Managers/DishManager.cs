@@ -41,11 +41,8 @@ namespace LoseWeight.App.Managers
             return dish.Id;
         }
 
-        public void RemoveDish()
+        public void RemoveDish(int id)
         {
-            Console.WriteLine("Podaj Id dania do usunięcia: ");
-            var idForRemove = Console.ReadLine();
-            Int32.TryParse(idForRemove, out int id);
             var dish = _itemService.GetItemById(id);
             _itemService.DeleteItem(dish);
         }
@@ -57,6 +54,12 @@ namespace LoseWeight.App.Managers
             return dishes;
 
 
+        }
+
+        public Dish GetDishById(int id)
+        {
+            var dish = _itemService.GetItemById(id);
+            return dish;
         }
     }
 }

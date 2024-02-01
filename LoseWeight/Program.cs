@@ -39,8 +39,10 @@ public class Program
                     var newId = dishManager.AddDish();
                     break;
                 case '4':
-                    Console.WriteLine("\n");
-                    dishManager.RemoveDish();
+                    Console.WriteLine("\nPodaj Id dania do usunięcia: ");
+                    var idForRemove = Console.ReadLine();
+                    Int32.TryParse(idForRemove, out int id);
+                    dishManager.RemoveDish(id);
                     break;
                 case '5':
                     Console.WriteLine("\n");
