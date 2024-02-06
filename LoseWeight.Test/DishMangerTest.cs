@@ -38,9 +38,7 @@ namespace LoseWeight.Test
             dishes.Add(new Dish(2, "Chleb", 234, 2));
             dishes.Add(new Dish(3, "Wieprzowina", 456, 3));
             var mock = new Mock<IService<Dish>>();
-            //mock.Setup(s => s.AddItem(dish));
-            //mock.Setup(s => s.AddItem(dish1));
-
+            
             mock.Setup(m => m.GetAllItems()).Returns(dishes);
             var manager = new DishManager(new MenuActionService(), mock.Object);
 
@@ -54,12 +52,35 @@ namespace LoseWeight.Test
         [Fact]
         public void CanDeleteItem()
         {
-            List<Dish> dishes = new List<Dish>();
-            dishes.Add(new Dish(1, "Kurczak", 345, 3));
-            dishes.Add(new Dish(2, "Chleb", 234, 2));
-            dishes.Add(new Dish(3, "Wieprzowina", 456, 3));
+            Dish dish = new Dish(1, "Kurczak", 345, 3);
+           
             var mock = new Mock<IService<Dish>>();
 
+            mock.Setup(m => m.GetItemById(dish.Id)).Returns(dish);
+            mock.Setup(m => m.DeleteItem(It.IsAny<Dish>()));
+            var manager = new DishManager(new MenuActionService(), mock.Object);
+
+            manager.RemoveDish(dish.Id);
+
+            mock.Verify(m => m.DeleteItem(dish));
+
+        }
+        [Fact]
+        public void CanGetDishById()
+        {
+            Dish dish = new Dish(1, "Kurczak", 345, 3);
+
+            var mock = new Mock<IService<Dish>>();
+
+            mock.Setup(m => m.GetItemById(dish.Id)).Returns(dish);
+
+            var manager = new DishManager(new MenuActionService(), mock.Object);
+
+            var returnedDish = manager.GetDishById(dish.Id);
+
+            returnedDish.Should().BeOfType(typeof(Dish));
+            returnedDish.Should().NotBeNull();
+            returnedDish.Should().BeSameAs(dish);
         }
     }
 }
