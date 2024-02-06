@@ -42,46 +42,25 @@ namespace LoseWeight.App.Managers
 
         }
 
-        public double CountBMI()
+        public Person GetDataForCountingBMI()
         {
             Console.WriteLine("Get weight in KG (Separator should be a point)");
             var weight = Console.ReadLine();
-            int weightValue;
-            Int32.TryParse(weight, out weightValue);
+            double.TryParse(weight, out double weightValue);
             Console.WriteLine("Get height in cm");
             var height = Console.ReadLine();
-            double heightValue;
-            double.TryParse(height, out heightValue);
-            heightValue = heightValue / 100;
-            double bmi = weightValue / Math.Pow(heightValue, 2);
+            Int32.TryParse(height, out int heightValue);
 
-            if (bmi >= 18.5 && bmi <= 24.99)
+            Person person = new Person()
             {
-                Console.WriteLine($"Your BMI is {bmi}. You heave correct weight \n");
-            }
-            else if (bmi >= 25.00 && bmi <= 29.99)
-            {
-                Console.WriteLine($"Your BMI is {bmi}. You are overweight \n");
-            }
-            else if (bmi >= 30.00 && bmi <= 34.99)
-            {
-                Console.WriteLine($"Your BMI is {bmi}. You have stage 1 obesity \n");
-            }
-            else if (bmi >= 35.00 && bmi <= 39.99)
-            {
-                Console.WriteLine($"Your BMI is {bmi}. You have stage 2 obesity \n");
-            }
-            return bmi;
+                HeightValue = heightValue,
+                WeightValue = weightValue,
+            };
+
+            return person;
         }
 
-        public void CountBmrFemale()
-        {
-            var person = GetDataForCounting();
-            double femaleBmr = 655 + (9.6 * person.WeightValue) + (1.8 * person.HeightValue) - (4.7 * person.AgeValue);
-            Console.WriteLine($"Your BMR is equal: {femaleBmr} kcal");
-        }
-
-        public Person GetDataForCounting()
+        public Person GetDataForCountingBMR()
         {
             Person person = new Person();
 
@@ -104,33 +83,6 @@ namespace LoseWeight.App.Managers
             person.HeightValue = heightValue;
 
             return person;
-        }
-
-        public void CountBmrMale()
-        {
-
-            var person = GetDataForCounting();
-            double maleBmr = 66 + (13.7 * person.WeightValue) + (5 * person.HeightValue) - (6.8 * person.AgeValue);
-            Console.WriteLine($"Your BMR is equal: {maleBmr} kcal");
-
-        }
-
-        public void CountBMR()
-        {
-            Console.WriteLine("Please anter yor sex M/F:");
-            var sex = Console.ReadLine();
-            if (sex.ToUpper() == "M")
-            {
-                CountBmrMale();
-            }
-            else if (sex.ToUpper() == "F")
-            {
-                CountBmrFemale();
-            }
-            else
-            {
-                Console.WriteLine("Action you entered does not exist");
-            }
         }
     }
 }
