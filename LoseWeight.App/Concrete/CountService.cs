@@ -1,13 +1,10 @@
-﻿using LoseWeight.App.Abstract;
-using LoseWeight.App.Managers;
-using LoseWeight.Domain.Entity;
+﻿using LoseWeight.Domain.Entity;
 
 namespace LoseWeight.App.Concrete
 {
     public class CountService
     {
-        private readonly CountManager _countManager;
-
+       
         public CountService()
         {
            
