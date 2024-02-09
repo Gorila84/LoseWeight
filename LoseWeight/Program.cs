@@ -8,8 +8,9 @@ public class Program
         MenuActionService menuActionService = new MenuActionService();
         ItemService itemService = new ItemService();
         DishManager dishManager = new DishManager(menuActionService, itemService);
-        CountManager countManager = new CountManager(itemService);
-        CountService countService = new CountService(countManager);
+        CountService countService = new CountService();
+        CountManager countManager = new CountManager(itemService, countService);
+        
 
         while (true)
         {
@@ -28,11 +29,13 @@ public class Program
             {
                 case '1':
                     Console.WriteLine("\n");
-                    countService.CountBMI();
+                    var personDataForBMI = countManager.GetDataForCountingBMI();
+                    countService.CountBMI(personDataForBMI);
                     break;
                 case '2':
                     Console.WriteLine("\n");
-                    countService.CountBMR();
+                    var personDataForBMR = countManager.GetDataForCountingBMR();
+                    countService.CountBMR(personDataForBMR);
                     break;
                 case '3':
                     Console.WriteLine("\n");

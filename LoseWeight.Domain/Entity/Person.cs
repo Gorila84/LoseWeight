@@ -11,5 +11,6 @@ namespace LoseWeight
         public double WeightValue { get; set; }
         public double HeightValue { get; set; }
         public int AgeValue { get; set; }
+        public string Sex { get; set; }
     }
 }

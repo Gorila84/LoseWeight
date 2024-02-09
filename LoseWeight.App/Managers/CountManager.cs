@@ -8,18 +8,15 @@ namespace LoseWeight.App.Managers
     {
         
         private readonly IService<Dish> _itemService;
+        private readonly CountService _countService;
 
-        public CountManager(IService<Dish> itemService)
+        public CountManager(IService<Dish> itemService, CountService countService)
         {
             _itemService = itemService;
+            _countService = countService;
         }
 
-        public double CountDishCalorificPerOneGram(Dish dish, int quantity)
-        {
-
-            double calorific = (double)(dish.Calories / 100.00) * quantity;
-            return calorific;
-        }
+    
 
         public Dish GetDishForCount()
         {
@@ -37,7 +34,7 @@ namespace LoseWeight.App.Managers
             var grams = Console.ReadLine();
             int dishGrams;
             Int32.TryParse(grams, out dishGrams);
-            double calorific = CountDishCalorificPerOneGram(dish, dishGrams);
+            double calorific = _countService.CountDishCalorificPerOneGram(dish, dishGrams);
             Console.WriteLine($"Caloric content is equal: {calorific}");
 
         }
@@ -77,12 +74,17 @@ namespace LoseWeight.App.Managers
             Console.WriteLine("Get your age");
             var age = Console.ReadLine();
             Int32.TryParse(age, out ageValue);
+            Console.WriteLine("Please anter yor sex M/F:");
+            var sex = Console.ReadKey();
 
             person.AgeValue = ageValue;
             person.WeightValue = weightValue;
             person.HeightValue = heightValue;
+            person.Sex = sex.KeyChar.ToString().ToUpper();
 
             return person;
         }
+
+       
     }
 }

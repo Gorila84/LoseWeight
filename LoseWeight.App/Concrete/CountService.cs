@@ -8,16 +8,16 @@ namespace LoseWeight.App.Concrete
     {
         private readonly CountManager _countManager;
 
-        public CountService(CountManager countManager)
+        public CountService()
         {
-            _countManager = countManager;
+           
         }
-        public double CountBMI()
+        public double CountBMI(Person person)
         {
-            var person = _countManager.GetDataForCountingBMI();
+          
             person.HeightValue = person.HeightValue / 100;
-            double bmi = person.WeightValue / Math.Pow(person.HeightValue, 2);
-
+            double result = person.WeightValue / Math.Pow(person.HeightValue, 2);
+            double bmi = Math.Truncate(result * 100) / 100;
             if (bmi >= 18.5 && bmi <= 24.99)
             {
                 Console.WriteLine($"Your BMI is {bmi}. You heave correct weight \n");
@@ -34,43 +34,54 @@ namespace LoseWeight.App.Concrete
             {
                 Console.WriteLine($"Your BMI is {bmi}. You have stage 2 obesity \n");
             }
+
+
             return bmi;
         }
 
-        public void CountBmrFemale()
+        public double CountBmrFemale(Person person)
         {
-            var person = _countManager.GetDataForCountingBMR();
+             
             double femaleBmr = 655 + (9.6 * person.WeightValue) + (1.8 * person.HeightValue) - (4.7 * person.AgeValue);
-            Console.WriteLine($"Your BMR is equal: {femaleBmr} kcal");
+            double result = Math.Truncate(femaleBmr * 100) / 100;
+            Console.WriteLine($"Your BMR is equal: {result} kcal");
+            return result; 
         }
 
-       
-
-        public void CountBmrMale()
+        public double CountDishCalorificPerOneGram(Dish dish, int quantity)
         {
+            double calorific = (double)(dish.Calories / 100.00) * quantity;
+            return calorific;
+        }
 
-            var person = _countManager.GetDataForCountingBMR();
+
+        public double CountBmrMale(Person person)
+        {
             double maleBmr = 66 + (13.7 * person.WeightValue) + (5 * person.HeightValue) - (6.8 * person.AgeValue);
-            Console.WriteLine($"Your BMR is equal: {maleBmr} kcal");
-
+            double result =  Math.Truncate(maleBmr * 100) / 100;
+            Console.WriteLine($"Your BMR is equal: {result} kcal");
+            return result;
         }
 
-        public void CountBMR()
+        public double CountBMR(Person person)
         {
-            Console.WriteLine("Please anter yor sex M/F:");
-            var sex = Console.ReadLine();
-            if (sex.ToUpper() == "M")
+            
+            if (person.Sex == "M")
             {
-                CountBmrMale();
+               var bmr =  CountBmrMale(person);
+                return bmr;
             }
-            else if (sex.ToUpper() == "F")
+            else if (person.Sex == "F")
             {
-                CountBmrFemale();
+                var bmr = CountBmrFemale(person);
+                return bmr;
             }
             else
             {
                 Console.WriteLine("Action you entered does not exist");
+                return 0.0;
             }
+
         }
     }
 }
