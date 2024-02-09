@@ -17,7 +17,7 @@ public class Program
             Console.WriteLine("Hello in calorific value counter.");
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Please select action");
-            var mainMenu = menuActionService.GetMenuActionsByName("Main");
+            var mainMenu = menuActionService.GetMainMenu();
             for (int i = 0; i < mainMenu.Count; i++)
             {
                 Console.WriteLine($"{mainMenu[i].Id} {mainMenu[i].Name}");
@@ -50,10 +50,16 @@ public class Program
                 case '5':
                     Console.WriteLine("\n");
                     var dishes = dishManager.GetAlldishes();
-                    Console.WriteLine("\nID|Name|Calories|Dish type");
+                    Console.WriteLine("\nID | Nazwa | Kalorie | Węglowodany | Białko | Tłuszcze | Kategoria");
                     foreach (var dish in dishes)
                     {
-                        Console.WriteLine(dish.Id + "|" + dish.Name + "|" + dish.Calories + "|" + dish.Dishtype);
+                        Console.WriteLine(dish.Id + " | " 
+                                        + dish.Name + " | "
+                                        + dish.Calories + " | "
+                                        + dish.Carbohydrates + " | "
+                                        + dish.Protein + " | "
+                                        + dish.Fat + " | "
+                                        + dish.Dishtype);
                     }
                     break;
                 case '6':

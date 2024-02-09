@@ -1,5 +1,6 @@
 ﻿using LoseWeight.App.Common;
 using LoseWeight.Domain.Entity;
+using Newtonsoft.Json;
 
 namespace LoseWeight.App.Concrete
 {
@@ -11,10 +12,32 @@ namespace LoseWeight.App.Concrete
         //    MenuActions menuAction = new MenuActions() { Id = id, ActionName = actionName, MenuName = menuName };
         //    menuActions.Add(menuAction);
         //}
-        public MenuActionService()
+      
+
+        public List<MenuActions> GetMainMenu()
         {
-            Initialize();
+            
+            string MAIN_MENU_PATH = @"E:\SzkolaDoneta\LoseWeight\LoseWeight.App\Datas\mainMenu.json";
+
+            using StreamReader fs = File.OpenText(MAIN_MENU_PATH);
+            JsonSerializer serializer = new JsonSerializer();
+            var menu = (List<MenuActions>)serializer.Deserialize(fs, typeof(List<MenuActions>));
+
+            return menu;
         }
+
+        public List<MenuActions> GetDishMenu()
+        {
+
+            string DISH_MENU_PATH = @"E:\SzkolaDoneta\LoseWeight\LoseWeight.App\Datas\dishMenu.json";
+
+            using StreamReader fs = File.OpenText(DISH_MENU_PATH);
+            JsonSerializer serializer = new JsonSerializer();
+            var menu = (List<MenuActions>)serializer.Deserialize(fs, typeof(List<MenuActions>));
+
+            return menu;
+        }
+
 
         public List<MenuActions> GetMenuActionsByName(string name)
         {

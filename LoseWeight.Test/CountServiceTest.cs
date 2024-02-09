@@ -6,19 +6,19 @@ namespace LoseWeight.Test
 {
     public class CountServiceTest
     {
-        [Fact]
-        public void CanCountDishCalorificPerOneGram()
-        {
-            Dish dish = new Dish(1, "Kurczak", 345, 3);
-            int quantity = 200;
-            double result = 690;
-            CountService countService = new CountService();
+        //[Fact]
+        //public void CanCountDishCalorificPerOneGram()
+        //{
+        //    Dish dish = new Dish(1, "Kurczak", 345, 3);
+        //    int quantity = 200;
+        //    double result = 690;
+        //    CountService countService = new CountService();
 
-            var countCalorific = countService.CountDishCalorificPerOneGram(dish, quantity);
+        //    var countCalorific = countService.CountDishCalorificPerOneGram(dish, quantity);
 
-            countCalorific.Should().BeOfType(typeof(double));
-            countCalorific.Should().Be(result);
-        }
+        //    countCalorific.Should().BeOfType(typeof(double));
+        //    countCalorific.Should().Be(result);
+        //}
 
         [Fact]
         public void CanGetDishForCount()

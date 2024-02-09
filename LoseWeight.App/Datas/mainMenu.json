@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"Name": "Count BMI",
+		"MenuName": "Main"
+	},
+	{
+		"id": 2,
+		"Name": "Count BMR",
+		"MenuName": "Main"
+	},
+	{
+		"id": 3,
+		"Name": "Add dish to list",
+		"MenuName": "Main"
+	},
+	{
+		"id": 4,
+		"Name": "Remove dish from list",
+		"MenuName": "Main"
+	},
+	{
+		"id": 5,
+		"Name": "Show dish List",
+		"MenuName": "Main"
+	},
+	{
+		"id": 6,
+		"Name": "Count calorific value",
+		"MenuName": "Main"
+	}
+
+]

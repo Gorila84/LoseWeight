@@ -1,0 +1,48 @@
+[
+	{
+		"id": 1,
+		"Name": "Pieczywo",
+		"MenuName": "Dish"
+	},
+	{
+		"id": 2,
+		"Name": "Mięso",
+		"MenuName": "Dish"
+	},
+	{
+		"id": 3,
+		"Name": "Owoce",
+		"MenuName": "Dish"
+	},
+	{
+		"id": 4,
+		"Name": "Warzywa",
+		"MenuName": "Dish"
+	},
+	{
+		"id": 5,
+		"Name": "Słodycze",
+		"MenuName": "Dish"
+	},
+	{
+		"id": 6,
+		"Name": "Zupy",
+		"MenuName": "Dish"
+	},
+    {
+		"id": 7,
+		"Name": "Przekąski",
+		"MenuName": "Dish"
+	},
+    {
+		"id": 8,
+		"Name": "Ryby",
+		"MenuName": "Dish"
+	},
+    {
+		"id": 9,
+		"Name": "Inne",
+		"MenuName": "Dish"
+	}
+
+]

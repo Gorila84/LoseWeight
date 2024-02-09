@@ -1,0 +1,167 @@
+Id;Name;Calories;Carbohydrates;Protein;Fat;Dishtype
+1;Agrest ;41;11,8;0,8;0,2;3
+2;Ananas ;54;13,6;0,4;0,2;3
+3;Ananas, plastry w syropie ;84;21;0,4;0,1;3
+4;Ananasy, dżem niskosłodzony ;157;38,6;0,2;0,1;3
+5;Arbuz ;36;8,4;0,6;0,1;3
+6;Awokado ;160;7,4;2;15,3;4
+7;Babka biszkoptowa ;340;67,1;8,2;4,3;4
+8;Bagietki francuskie ;282;60,1;7,9;1,7;1
+9;Bakłażan ;21;6,3;1,1;0,1;4
+10;Baleron gotowany ;244;0,9;15,1;20,2;2
+11;Banan ;95;23,5;1;0,3;3
+12;Baranina, łopatka ;284;0;15,6;25;2
+13;Baranina, udziec ;232;0;18;18;2
+14;Barszcz czerwony zabielany ;32;3,3;2;1,4;6
+15;Barszcz ukraiński ;54;6,5;2,1;2,7;6
+16;Barszcz ukraiński mrożony ;28;7,1;1,6;0,2;6
+17;Barszcz z boćwiną ;29;2,5;1,5;1,7;6
+18;Baton Bounty ;448;56,7;4,2;25,2;7
+19;Baton Mars ;451;68,9;3,6;18,2;7
+20;Baton Milky Way ;448;71,8;3,6;16,2;7
+21;Baton Snickers ;497;52,6;9,7;28,9;7
+22;Baton szynkowy z indyka ;143;0,1;14,9;9,3;2
+23;Baton Twix ;483;64,2;5,3;23,2;7
+24;Baton z kurczaka ;144;0,1;16,7;8,6;2
+25;Befsztyk bity wiejski ;258;1,6;19,4;19,6;2
+26;Białko jaja kurzego ;49;0,7;10,9;0,2;9
+27;Bigos ;119;3,9;5,1;9,9;6
+28;Bitki wieprzowe ;195;2,6;10,4;16,1;2
+29;Bitki wieprzowe w jarzynach ;198;4,3;10,7;16;2
+30;Bitki wołowe ;102;2,4;13,6;4,3;2
+31;Bitki wołowe w jarzynach ;116;6,6;14,3;4,4;2
+32;Bliny ziemniaczane ;257;23,6;5,6;16,3;4
+33;Boćwina ;17;5,5;2,1;0,5;4
+34;Boeuf Strogonow ;220;3,7;19,5;14,3;6
+35;Bób ;66;14;7,1;0,4;4
+36;Brokuły ;27;5,2;3;0,4;4
+37;Brokuły mrożone ;24;4,7;2,7;0,4;4
+38;Brukselka ;37;8,7;4,7;0,5;4
+39;Brukselka mrożona ;36;8,4;4,5;0,5;4
+40;Brukselka z wody ;110;12;4,2;7,1;4
+41;Bryzol wołowy z polędwicy ;252;1,4;24,6;16,6;2
+42;Brzoskwinia ;46;11,9;1;0,2;3
+43;Brzoskwinie w syropie ;73;18,2;0,4;0,1;3
+44;Brzoskwinie, dżem niskosłodzony ;155;38,3;0,5;0,1;3
+45;Buchty drożdżowe ;303;45,6;6,2;11;1
+46;Budyń z mięsa i makaronu ;171;23,1;10,6;4,4;2
+47;Bułka tarta ;347;77,6;9,7;1,9;1
+48;Bułki grahamki ;258;56,9;8,2;1,7;1
+49;Bułki kajzerki ;296;59,4;7,5;3,6;1
+50;Bułki maślane ;326;61,8;7,7;5,9;1
+51;Bułki pszenne zwykłe ;272;58,5;7,3;1,5;1
+52;Bułki wrocławskie ;293;57,4;7,2;4,4;1
+53;Burak ;38;9,5;1,8;0,1;4
+54;Buraki mrożone, puree ;34;8,6;1,6;0,1;4
+55;Buraki z jabłkami ;69;10,3;1,5;3,3;4
+56;Buraki zasmażane ;83;8,7;1,6;5,5;4
+57;Buraki ze śmietaną ;68;8,8;1,8;3,6;4
+58;Cebula ;30;6,9;1,4;0,4;4
+59;Chałki ;333;61,6;7;7;1
+60;Chipsy bekonowe ;537;52,2;5,9;38;7
+61;Chipsy paprykowe ;549;50,4;6;40;7
+62;Chipsy solone ;552;49,9;5,6;40,7;7
+63;Chleb baltonowski ;246;55,9;5,9;1,5;1
+64;Chleb chrupki ;353;78,9;8,7;2,4;1
+65;Chleb Graham ;226;49,4;7,6;1,7;1
+66;Chleb mazowiecki ;248;56,3;6,3;1,4;1
+67;Chleb mieszany słonecznikowy ;246;49,2;6,4;4,5;1
+68;Chleb mieszany sojowy ;231;49,6;6,8;2,7;1
+69;Chleb praski ;244;56,2;5,7;1,3;1
+70;Chleb pszenny ;249;56;6,8;1,4;1
+71;Chleb staropolski ;219;50,5;5;1,7;1
+72;Chleb wiejski ;239;55,1;5,8;1,3;1
+73;Chleb zwykły ;245;57;5,4;1,3;1
+74;Chleb żytni jasny ;241;57,1;4;1,3;1
+75;Chleb żytni jasny mleczny ;253;58,3;4,8;1,8;1
+76;Chleb żytni pełnoziarnisty ;237;53,9;6,7;1,8;1
+77;Chleb żytni razowy ;223;51,5;5,6;1,7;1
+78;Chleb żytni razowy na miodzie ;234;54,2;5,3;1,6;1
+79;Chleb żytni razowy z soją i słonecznikiem ;244;50,5;7,9;3,7;1
+80;Chleb żytni wileński ;225;52,3;4,4;1,5;1
+81;Chrupki kukurydziane ;352;78,9;8,9;3;7
+82;Chrzan ;67;18,1;4,5;0,6;4
+83;Ciastka francuskie ze śliwkami ;432;44,8;5;26,8;7
+84;Ciastka Karpatki ;449;39,1;4,7;30,9;7
+85;Ciastka Napoleonki ;348;43,6;5,9;17;7
+86;Ciastka tortowe z owocami ;276;47,2;3,2;9;7
+87;Ciasto drożdżowe ;290;47,7;7,4;8,2;7
+88;Ciasto kruche podstawowe ;429;49,9;5,2;23,8;7
+89;Ciasto naleśnikowe bez piany ;174;28,4;5,9;4,3;7
+90;Ciasto naleśnikowe biszkoptowe ;187;25,5;8,3;6;7
+91;Cielęcina w potrawce ;103;4;13,5;4;2
+92;Cielęcina, łopatka ;106;0;19,9;2,8;2
+93;Cielęcina, sznyclówka ;105;0;20,5;2,4;2
+94;Cielęcina, udziec ;108;0;19,9;3,1;2
+95;Coca Cola ;42;10,4;0;0;7
+96;Cukier ;405;99,8;0;0;7
+97;Cukierki irysy ;421;76,1;4,3;10,7;7
+98;Cukierki krówki ;421;76,1;4,3;10,7;7
+99;Cukinia ;15;3,2;1,2;0,1;4
+100;Cykoria ;21;4,1;1,7;0,2;4
+101;Cytryna ;36;9,5;0,8;0,3;3
+102;Czarne jagody ;45;12,2;0,8;0,6;3
+103;Czarne porzeczki, dżem niskosłodzony ;152;39,6;0,5;0,1;7
+104;Czarne porzeczki, dżem wysokosłodzony ;251;63,9;0,5;0,1;7
+105;Czekolada biała ;530;51;7,7;38,4;7
+106;Czekolada deserowa ;531;64;5,3;28,9;7
+107;Czekolada gorzka ;554;56,6;6,7;34,3;7
+108;Czekolada kawowa ;526;62,7;5,5;29;7
+109;Czekolada mleczna ;549;54,7;9,8;32,8;7
+110;Czekolada mleczna z orzechami laskowymi ;539;57,3;8,6;30,9;7
+111;Czekolada nadziewana ;450;68,8;3,9;17,6;7
+112;Czereśnie ;61;14,6;1;0,3;3
+113;Czosnek ;146;32,6;6,4;0,5;4
+114;Ćwikła ;41;10,2;1,6;0,1;4
+115;Daktyle suszone ;277;74;2;0,4;3
+116;Delicje szampańskie ;327;52,8;4,1;11,2;7
+117;Deser ryżowy jabłkowy ;134;23,9;2,8;3;7
+118;Deser ryżowy waniliowy ;133;23,5;3;2,9;7
+119;Deser twarogowy termizowany kakaowy ;156;11,2;13,9;6,2;7
+120;Deser twarogowy termizowany truskawkowy ;170;18,3;11;5,8;7
+121;Dorsz świeży ;78;0;17,7;0,7;8
+122;Dorsz świeży, filety bez skóry ;70;0;16,5;0,3;8
+123;Dorsz w jarzynach ;117;3,9;15,6;4,9;8
+124;Dorsz wędzony ;94;0;22,1;0,5;8
+125;Dorsz z rusztu ;172;0,6;22,1;9,1;8
+126;Dorsz, filety po grecku ;152;4,6;10,6;10,8;8
+127;Dorsz, filety smażone panierowane ;273;14,6;19,1;15,8;8
+128;Dorsz, kotlet mielony ;260;10,9;14,9;17,8;8
+129;Dorsz, pulpety ;112;8,8;14,2;2,6;8
+130;Dorsz, sałatka ;187;7,2;9,8;13,9;8
+131;Dynia ;28;7,7;1,3;0,3;4
+132;Dynia z pomidorami ;44;6,5;1,2;2,4;4
+133;Dynia, pestki ;556;18;24,5;45,8;4
+134;Eklerki z bitą śmietaną ;317;33,5;5,8;18;7
+135;Fasola biała, suche nasiona ;288;61,6;21,4;1,6;4
+136;Fasola cięta konserwowa ;16;4,5;1,5;0,2;4
+137;Fasola szparagowa ;27;7,6;2,4;0,2;4
+138;Fasolka flageolet konserwowa ;61;15;6,3;0,2;4
+139;Fasolka po bretońsku ;141;15,9;8;6,6;6
+140;Fasolka szparagowa ;97;10,3;2,9;6,9;4
+141;Fasolka szparagowa mrożona ;24;6,8;2,2;0,2;4
+142;Figi suszone ;290;78;3,6;1,2;3
+143;Flaki ;84;0;16;2,2;2
+144;Flądra świeża ;83;0;16,5;1,8;8
+145;Galaretka z nóżek wieprzowych ;202;0,8;16,9;14,9;7
+146;Gęś, tuszka ;339;0;14,1;31,8;2
+147;Gołąbki z mięsem i ryżem w sosie pomidorowym ;108;10;3,6;6,7;2
+148;Grejpfrut ;36;9,8;0,6;0,2;3
+149;Groch, suche nasiona ;293;60,2;23,8;1,4;4
+150;Groszek zielony ;75;17;6,7;0,4;4
+151;Groszek zielony konserwowy ;63;15,8;4,9;0,2;4
+152;Groszek zielony mrożony ;72;16,3;6,4;0,4;4
+153;Groszek zielony z masłem ;100;9,3;3,7;6,8;4
+154;Gruszka ;54;14,4;0,6;0,2;3
+155;Gruszki w sosie waniliowym ;151;34,8;1,6;1,1;3
+156;Gulasz wołowy ;148;2,6;14;9,2;6
+157;Halibut biały świeży ;98;0;20,1;1,9;8
+159;Herbatniki ;437;76,8;8,2;11;7
+160;Herbatniki Corso ;440;67,1;5;17,2;7
+161;Herbatniki kakaowe ;474;62,9;6,9;22,3;7
+162;Herbatniki kokosowe ;473;59,8;6,4;25,2;7
+163;Herbatniki sezamowe ;503;55,7;8,1;28,6;7
+164;Herbatniki w czekoladzie ;489;63,1;6,3;24;7
+165;Herbatniki z cukrem ;460;70,7;6,7;17,2;7
+166;Herbatniki z nadzieniem czekoladowym ;497;57,3;5,5;27,9;7
+167;Herbatniki z nadzieniem owocowym ;389;58,6;3,8;16,1;7

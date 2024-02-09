@@ -17,12 +17,12 @@ namespace LoseWeight.App.Managers
 
         public int AddDish()
         {
-            var addNewDishItemMenu = _actionService.GetMenuActionsByName("Dish");
+            var addNewDishItemMenu = _actionService.GetDishMenu();
             for (int i = 0; i < addNewDishItemMenu.Count; i++)
             {
                 Console.WriteLine($"{addNewDishItemMenu[i].Id} {addNewDishItemMenu[i].Name}");
             }
-            
+
             var operation = Console.ReadKey();
             Int32.TryParse(operation.KeyChar.ToString(), out int dishTypeId);
             Console.WriteLine("\n");
@@ -35,7 +35,7 @@ namespace LoseWeight.App.Managers
             Int32.TryParse(calories, out int caloriesValue);
             var lastId = _itemService.GetLastId();
 
-            Dish dish = new Dish(lastId + 1, name, caloriesValue, dishTypeId);
+            Dish dish = new Dish(lastId + 1, name,  caloriesValue, 1.1, 2.2, 3.3, dishTypeId);
             _itemService.AddItem(dish);
 
             return dish.Id;
@@ -49,12 +49,16 @@ namespace LoseWeight.App.Managers
 
         public List<Dish> GetAlldishes()
         {
-
+            
             var dishes = _itemService.GetAllItems();
+
+
             return dishes;
 
 
         }
+
+        
 
         public Dish GetDishById(int id)
         {
