@@ -6,6 +6,7 @@ namespace LoseWeight.Test
 {
     public class CountServiceTest
     {
+       
         //[Fact]
         //public void CanCountDishCalorificPerOneGram()
         //{

@@ -9,20 +9,23 @@ namespace LoseWeight.App.Managers
         
         private readonly IService<Dish> _itemService;
         private readonly CountService _countService;
+        private readonly DishService _dishService;
 
-        public CountManager(IService<Dish> itemService, CountService countService)
+        public CountManager(IService<Dish> itemService, CountService countService, DishService dishService)
         {
             _itemService = itemService;
             _countService = countService;
+            _dishService = dishService;
         }
 
     
 
         public Dish GetDishForCount()
         {
-            Console.WriteLine("Enter product name for count calorific:");
-            var dishName = Console.ReadLine();
-            var dishForCount = _itemService.GetItemByName(dishName);
+            Console.WriteLine("Wprowadź id dania do wyliczenia kaloryczności:");
+            var dishId = Console.ReadLine();
+            Int32.TryParse(dishId, out int id);
+            var dishForCount = _dishService.GetDisghById(id);
             return dishForCount;
 
         }
@@ -35,7 +38,7 @@ namespace LoseWeight.App.Managers
             int dishGrams;
             Int32.TryParse(grams, out dishGrams);
             double calorific = _countService.CountDishCalorificPerOneGram(dish, dishGrams);
-            Console.WriteLine($"Caloric content is equal: {calorific}");
+            Console.WriteLine($"Caloric content is equal: {calorific} \n");
 
         }
 

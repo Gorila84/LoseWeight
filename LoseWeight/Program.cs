@@ -1,5 +1,6 @@
 ﻿using LoseWeight.App.Concrete;
 using LoseWeight.App.Managers;
+using LoseWeight.Domain.Entity;
 
 public class Program
 {
@@ -7,13 +8,19 @@ public class Program
     {
         MenuActionService menuActionService = new MenuActionService();
         ItemService itemService = new ItemService();
+        DishService dishService = new DishService(itemService);
         DishManager dishManager = new DishManager(menuActionService, itemService);
         CountService countService = new CountService();
-        CountManager countManager = new CountManager(itemService, countService);
-        
+        CountManager countManager = new CountManager(itemService, countService, dishService);
+
+
+            
+
 
         while (true)
         {
+            
+
             Console.WriteLine("Hello in calorific value counter.");
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Please select action");
@@ -39,17 +46,18 @@ public class Program
                     break;
                 case '3':
                     Console.WriteLine("\n");
-                    var newId = dishManager.AddDish();
+                    var newId = dishManager.GetDataForAddDish();
+                    dishService.AddDish(newId);
                     break;
                 case '4':
                     Console.WriteLine("\nPodaj Id dania do usunięcia: ");
                     var idForRemove = Console.ReadLine();
                     Int32.TryParse(idForRemove, out int id);
-                    dishManager.RemoveDish(id);
+                    dishService.RemoveDish(id);
                     break;
                 case '5':
                     Console.WriteLine("\n");
-                    var dishes = dishManager.GetAlldishes();
+                    var dishes = dishService.GetDishesFromCSV();
                     Console.WriteLine("\nID | Nazwa | Kalorie | Węglowodany | Białko | Tłuszcze | Kategoria");
                     foreach (var dish in dishes)
                     {
@@ -72,11 +80,13 @@ public class Program
             }
 
         }
-        
+
+     
+
 
     }
-        
-    
   
+
+
 }
 
